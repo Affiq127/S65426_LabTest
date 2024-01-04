@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Instructions:"
+        android:textSize="14sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="This is a simple mathematic games which is believed can train your brain.
+Two numbers are given randomly based on your level choice together with the operator. You just need to calculates
+the answer,write your answer and press check button. Every correct answer will give you 1 point while wrong answer will
+deduct 1 point."
+        android:textSize="14sp" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Choose level:"
+        android:textSize="14sp" />
+
+    <RadioGroup
+        android:id="@+id/difficultyRadioGroup"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/level1RadioButton"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:text="i3" />
+
+        <RadioButton
+            android:id="@+id/level2RadioButton"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:text="i5" />
+
+        <RadioButton
+            android:id="@+id/level3RadioButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="i7" />
+
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/questionTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:textSize="24sp" />
+
+    <TextView
+        android:id="@+id/answerTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp" />
+
+    <EditText
+        android:id="@+id/answerEditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <Button
+        android:layout_width="411dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="20dp"
+        android:background="@android:color/holo_blue_dark"
+        android:onClick="submitAnswer"
+        android:text="Check" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/purple_500"
+        android:text="point: "
+        android:textSize="50sp" />
+
+    <TextView
+        android:id="@+id/pointsTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#800000"
+        android:baselineAligned="false"
+        android:text="0"
+        android:textSize="50sp" />
+
+</LinearLayout>
